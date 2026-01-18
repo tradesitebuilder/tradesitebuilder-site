@@ -34,7 +34,7 @@ const Pricing: React.FC = () => {
               { title: "Cancel anytime", desc: "No long-term contracts. If you want to stop, you can cancel at any point." },
               { title: "Fast professional hosting", desc: "We use high-performance servers to ensure your site loads instantly for customers." },
               { title: "Ongoing support", desc: "Need a change? Just text us. We handle all content updates for you." },
-              { title: "SEO optimization", desc: "Basic setup to ensure your site is readable by Google and local search engines." },
+              { title: "Speed optimization", desc: "Technical adjustments to ensure your site is lightning fast for all visitors." },
               { title: "Mobile first", desc: "Every site is built to look perfect and work smoothly on iPhones and Androids." },
               { title: "Security (SSL)", desc: "Your site will have the padlock icon, showing customers it's safe to use." },
               { title: "Contact notifications", desc: "Lead form submissions are sent instantly to your phone and email." }

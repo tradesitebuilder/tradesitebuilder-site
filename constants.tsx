@@ -31,7 +31,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       "Hosting included",
       "Edits included",
       "SSL Certificate",
-      "Basic SEO",
+      "Lead capture forms",
       "Gallery section"
     ],
     featured: true,
@@ -47,7 +47,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       "Hosting included",
       "Edits included",
       "Priority support",
-      "Advanced SEO",
+      "Speed optimization",
       "Google Maps integration"
     ],
     cta: "Choose 5+ pages"
@@ -121,8 +121,8 @@ export const WHATS_INCLUDED = [
     icon: <PhoneCall className="w-5 h-5" />
   },
   {
-    title: "Basic SEO",
-    description: "We set up your page titles and descriptions to help you show up on Google.",
+    title: "Page Performance",
+    description: "We optimize your site speed and performance for a smooth visitor experience.",
     icon: <ShieldCheck className="w-5 h-5" />
   }
 ];

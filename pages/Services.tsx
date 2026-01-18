@@ -6,101 +6,84 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-32 pb-24 bg-brand-background">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-20 max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-brand-primary mb-8">What we build for you.</h1>
+          <h1 className="text-4xl md:text-6xl font-display font-bold text-brand-primary mb-8">Websites built for <span className="text-brand-accent italic font-serif">growth.</span></h1>
           <p className="text-xl text-brand-secondary leading-relaxed">
-            Professional, fast-loading websites tailored for tradespeople. No fluff, just high-quality digital assets that generate leads.
+            Every site we build is engineered specifically for tradespeople. We don't just make them look good; we make them generate work.
           </p>
         </div>
 
-        {/* What we build */}
+        {/* Deliverables */}
         <div className="mb-32">
-          <h2 className="text-2xl font-display font-bold text-brand-primary mb-12 flex items-center gap-4">
-            <div className="h-0.5 w-12 bg-brand-accent"></div>
-            Core Deliverables
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {SERVICES_FEATURES.map((feature, i) => (
               <div 
                 key={i}
-                className="p-8 bg-brand-surface border border-brand-border rounded-2xl flex items-start gap-6"
+                className="p-10 bg-brand-surface border border-brand-border/50 rounded-[2rem] hover:border-brand-accent transition-all group"
               >
-                <div className="p-4 bg-brand-surfaceLight border border-brand-border rounded-xl">
+                <div className="w-12 h-12 bg-brand-accent/10 border border-brand-accent/20 rounded-xl flex items-center justify-center mb-8 group-hover:bg-brand-accent group-hover:text-white transition-all text-brand-accent">
                   {feature.icon}
                 </div>
-                <div>
-                  <h3 className="text-xl font-display font-bold text-brand-primary mb-3">{feature.title}</h3>
-                  <p className="text-brand-secondary text-sm leading-relaxed">{feature.description}</p>
-                </div>
+                <h3 className="text-2xl font-display font-bold text-brand-primary mb-4">{feature.title}</h3>
+                <p className="text-brand-secondary text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* What's included */}
-        <div className="mb-32 p-12 md:p-20 bg-brand-surface border border-brand-border rounded-3xl">
-          <h2 className="text-3xl font-display font-bold text-brand-primary mb-12 text-center">Every subscription includes:</h2>
+        {/* Subscription details */}
+        <div className="mb-32 p-12 md:p-20 bg-brand-surface border border-brand-border/50 rounded-[3rem]">
+          <h2 className="text-3xl font-display font-bold text-brand-primary mb-16 text-center">Every subscription includes:</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {WHATS_INCLUDED.map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-brand-accent/10 border border-brand-accent/20 text-brand-accent rounded-full flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-brand-accent/5 border border-brand-accent/10 text-brand-accent rounded-full flex items-center justify-center mb-6">
                   {item.icon}
                 </div>
                 <h3 className="text-brand-primary font-bold mb-3">{item.title}</h3>
-                <p className="text-brand-secondary text-xs leading-relaxed">{item.description}</p>
+                <p className="text-brand-secondary text-[11px] leading-relaxed px-4">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Page Types */}
+        {/* Standard Pages */}
         <div className="mb-32">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="flex-1">
-              <h2 className="text-3xl font-display font-bold text-brand-primary mb-8">Standard pages we can include</h2>
-              <p className="text-brand-secondary mb-10">We build sites that give customers exactly what they need to choose your business over a competitor.</p>
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                {['Home Page', 'Our Services', 'Areas Covered', 'Project Gallery', 'About Us', 'Contact Form', 'FAQ Section', 'Privacy Policy'].map((page, i) => (
-                  <div key={i} className="flex items-center gap-3 text-brand-primary font-medium">
+              <h2 className="text-4xl font-display font-bold text-brand-primary mb-8 leading-tight">Everything you need to compete online.</h2>
+              <div className="grid grid-cols-2 gap-y-6 gap-x-8">
+                {['Home Page', 'Our Services', 'Areas Covered', 'Project Gallery', 'About Us', 'Contact Form', 'FAQ Section', 'Google Maps'].map((page, i) => (
+                  <div key={i} className="flex items-center gap-3 text-brand-secondary font-medium">
                     <CheckCircle2 size={18} className="text-brand-accent" />
                     {page}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="flex-1 bg-brand-surfaceLight border border-brand-border p-8 rounded-2xl w-full">
-               <div className="flex items-center gap-4 mb-8">
-                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            <div className="flex-1 w-full grid grid-cols-2 gap-4">
+               <div className="rounded-[2rem] h-64 overflow-hidden shadow-2xl border border-brand-border/50 bg-brand-surface">
+                 <img src="https://images.unsplash.com/photo-1541888941259-7997a9446bb5?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-60" alt="Worksite" />
                </div>
-               <div className="space-y-4">
-                 <div className="h-8 bg-brand-surface border border-brand-border rounded w-3/4"></div>
-                 <div className="h-40 bg-brand-surface border border-brand-border rounded w-full flex items-center justify-center">
-                    <span className="text-brand-border text-xs font-bold uppercase tracking-widest">Project Gallery Visual</span>
-                 </div>
-                 <div className="grid grid-cols-2 gap-4">
-                    <div className="h-20 bg-brand-surface border border-brand-border rounded"></div>
-                    <div className="h-20 bg-brand-surface border border-brand-border rounded"></div>
-                 </div>
+               <div className="rounded-[2rem] h-64 overflow-hidden mt-12 shadow-2xl border border-brand-border/50 bg-brand-surface">
+                 <img src="https://images.unsplash.com/photo-1504307651254-35680f3366d4?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-60" alt="Inspection" />
                </div>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-10 bg-brand-accent rounded-2xl">
-          <div className="text-brand-primary">
-            <h3 className="text-2xl font-display font-bold mb-2">Ready to see your site?</h3>
-            <p className="opacity-80">We'll build a custom mockup of your homepage for free.</p>
+        <div className="bg-brand-accent p-12 md:p-20 rounded-[3rem] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-12 blue-glow">
+          <div className="text-center md:text-left">
+            <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">Start your transformation.</h3>
+            <p className="text-white/80 font-medium text-lg">See your new homepage before you pay a penny.</p>
           </div>
-          <div className="flex gap-4">
-            <Link to="/pricing" className="bg-brand-primary text-brand-background px-6 py-3 rounded-full font-bold text-sm">View pricing</Link>
-            <Link to="/contact" className="bg-brand-background/20 text-brand-primary border border-brand-primary/20 hover:bg-brand-background/30 px-6 py-3 rounded-full font-bold text-sm">Get a mockup</Link>
-          </div>
+          <Link to="/contact" className="bg-white text-brand-accent px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-2xl">
+            Get your mockup
+          </Link>
         </div>
       </div>
     </div>
